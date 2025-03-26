@@ -835,6 +835,9 @@ struct BattleStruct
     u8 trainerSlideSpriteIds[MAX_BATTLERS_COUNT];
     u8 embodyAspectBoost[NUM_BATTLE_SIDES];
     u16 savedMove; // backup current move for mid-turn switching, e.g. Red Card
+    u16 opponentMonCanTera:6;
+    u16 opponentMonCanDynamax:6;
+    u16 padding:4;
 };
 
 struct AiBattleData
