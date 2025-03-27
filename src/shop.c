@@ -836,7 +836,6 @@ static void BuyMenuDrawMapMetatile(s16 x, s16 y, const u16 *src, u8 metatileLaye
 {
     u16 offset1 = x * 2;
     u16 offset2 = y * 64;
-
     if (metatileLayerType == METATILE_LAYER_TYPE_NORMAL)
     {
         BuyMenuDrawMapMetatileLayer(sShopData->tilemapBuffers[2], offset1, offset2, src + 0);
