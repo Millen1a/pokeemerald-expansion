@@ -35,8 +35,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 12,
-      "y": 13,
+      "x": 9,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -48,7 +48,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 14,
+      "x": 12,
       "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -141,7 +141,7 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 7,
+      "x": 6,
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
@@ -234,7 +234,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 15,
+      "x": 12,
       "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -242,7 +242,7 @@
     },
     {
       "type": "sign",
-      "x": 6,
+      "x": 5,
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -263,6 +263,14 @@
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LittlerootTown_EventScript_MaysHouseSign"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
     }
   ]
 }
