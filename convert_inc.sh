@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 for directory in data/maps/* ; do
