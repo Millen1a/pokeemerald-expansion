@@ -12,31 +12,37 @@ script LittlerootTown_NewLab_NorthEntry{
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, PlayerWalkToTableNorth)
     waitmovement(0)
+    applymovement(4, ProfLookatPlayer)
     msgbox(format("Go ahead and choose your Starter pair."))
     closemessage
     setvar(VAR_GET_NEWSTARTER,1)
     releaseall
 }
 
+movement ProfLookatPlayer{
+    face_player
+}
+
 movement PlayerWalkToTableNorth{
-        walk_up
-        walk_up
-        walk_up
-        walk_up
-        walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
 }
 
 script LittlerootTown_NewLab_Block{
     lockall
-	msgbox(format("It's dangerous to go out without a Pokemon."))
+    applymovement(4, ProfLookatPlayer)
+	msgbox(format("Hey! It's dangerous to go out without a Pokemon."))
     closemessage
-	applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+	applymovement(OBJ_EVENT_ID_PLAYER, NewLab_StopPlayer)
 	waitmovement(0)
 	releaseall
 }
 
 
-movement StopPlayer{
+movement NewLab_StopPlayer{
 	walk_up
 }
 
@@ -64,7 +70,9 @@ script LittlerootTown_NewLab_EventScript_Starter1 {
         setvar(VAR_GET_NEWSTARTER,2)
     }
     else{
+        applymovement(4, ProfLookatPlayer)
         msgbox(format("Don't be greedy now."))
+        closemessage
     }
     releaseall
 }
@@ -93,7 +101,9 @@ script LittlerootTown_NewLab_EventScript_Starter2 {
         setvar(VAR_GET_NEWSTARTER,2)
     }
     else{
+        applymovement(4, ProfLookatPlayer)
         msgbox(format("Don't be greedy now."))
+        closemessage
     }
     releaseall
 }
@@ -122,7 +132,9 @@ script LittlerootTown_NewLab_EventScript_Starter3{
         setvar(VAR_GET_NEWSTARTER,2)
     }
     else{
+        applymovement(4, ProfLookatPlayer)
         msgbox(format("Don't be greedy now."))
+        closemessage
     }
     releaseall
 }
