@@ -1,0 +1,128 @@
+mapscripts LittlerootTown_NewLab_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_NewLab_PokemonGet
+}
+
+script LittlerootTown_NewLab_PokemonGet{
+    setflag(FLAG_SYS_POKEMON_GET)
+}
+
+script LittlerootTown_NewLab_NorthEntry{
+    lockall
+    msgbox(format("Oh, you're here!"))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerWalkToTableNorth)
+    waitmovement(0)
+    msgbox(format("Go ahead and choose your Starter pair."))
+    closemessage
+    setvar(VAR_GET_NEWSTARTER,1)
+    releaseall
+}
+
+movement PlayerWalkToTableNorth{
+        walk_up
+        walk_up
+        walk_up
+        walk_up
+        walk_up
+}
+
+script LittlerootTown_NewLab_Block{
+    lockall
+	msgbox(format("It's dangerous to go out without a Pokemon."))
+    closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+	waitmovement(0)
+	releaseall
+}
+
+
+movement StopPlayer{
+	walk_up
+}
+
+script LittlerootTown_NewLab_EventScript_Starter1 {
+    lockall
+    if(!flag(FLAG_RECEIVE_STARTER)){
+        showmonpic(SPECIES_GOTHITA,7,4)
+        showmonpic(SPECIES_RALTS,8,4)
+        msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("It's fine, take your time."))
+        }
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_GOTHITA,5,ITEM_ORAN_BERRY,ITEM_POKE_BALL,NATURE_HARDY,,MON_FEMALE,,,,,,,31,31,31,31,31,31)
+            playfanfare(MUS_OBTAIN_ITEM)
+            givemon(SPECIES_RALTS,5,ITEM_ORAN_BERRY,ITEM_PREMIER_BALL,NATURE_SERIOUS,,MON_FEMALE,,,,,,,31,31,31,31,31,31)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_RECEIVE_STARTERPAIR1)
+            removeobject(1)
+            setflag(FLAG_RECEIVE_STARTER)
+            msgbox(format("Alright. Take care of them."))
+        }
+        hidemonpic
+        hidemonpic
+        setvar(VAR_GET_NEWSTARTER,2)
+    }
+    else{
+        msgbox(format("Don't be greedy now."))
+    }
+    releaseall
+}
+
+script LittlerootTown_NewLab_EventScript_Starter2 {
+    lockall
+    if(!flag(FLAG_RECEIVE_STARTER)){
+        showmonpic(SPECIES_TINKATINK,7,4)
+        showmonpic(SPECIES_ROOKIDEE,8,4)
+        msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("It's fine, take your time."))
+        }
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_TINKATINK,5,ITEM_ORAN_BERRY,ITEM_POKE_BALL,NATURE_HARDY,,MON_FEMALE,,,,,,,31,31,31,31,31,31)
+            playfanfare(MUS_OBTAIN_ITEM)
+            givemon(SPECIES_ROOKIDEE,5,ITEM_ORAN_BERRY,ITEM_PREMIER_BALL,NATURE_SERIOUS,,MON_FEMALE,,,,,,,31,31,31,31,31,31)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_RECEIVE_STARTERPAIR2)
+            removeobject(2)
+            setflag(FLAG_RECEIVE_STARTER)
+            msgbox(format("Alright. Take care of them."))
+        }
+        hidemonpic
+        hidemonpic
+        setvar(VAR_GET_NEWSTARTER,2)
+    }
+    else{
+        msgbox(format("Don't be greedy now."))
+    }
+    releaseall
+}
+
+script LittlerootTown_NewLab_EventScript_Starter3{
+    lockall
+    if(!flag(FLAG_RECEIVE_STARTER)){
+        showmonpic(SPECIES_EEVEE,7,4)
+        showmonpic(SPECIES_PIKACHU,8,4)
+        msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
+        if(var(VAR_RESULT) == NO) {
+            msgbox(format("It's fine, take your time."))
+        }
+        if(var(VAR_RESULT) == YES) {
+            givemon(SPECIES_EEVEE,5,ITEM_ORAN_BERRY,ITEM_POKE_BALL,NATURE_HARDY,,MON_FEMALE,,,,,,,31,31,31,31,31,31)
+            playfanfare(MUS_OBTAIN_ITEM)
+            givemon(SPECIES_PIKACHU,5,ITEM_ORAN_BERRY,ITEM_PREMIER_BALL,NATURE_SERIOUS,,MON_FEMALE,,,,,,,31,31,31,31,31,31)
+            playfanfare(MUS_OBTAIN_ITEM)
+            setflag(FLAG_RECEIVE_STARTERPAIR3)
+            removeobject(3)
+            setflag(FLAG_RECEIVE_STARTER)
+            msgbox(format("Alright. Take care of them."))
+        }
+        hidemonpic
+        hidemonpic
+        setvar(VAR_GET_NEWSTARTER,2)
+    }
+    else{
+        msgbox(format("Don't be greedy now."))
+    }
+    releaseall
+}

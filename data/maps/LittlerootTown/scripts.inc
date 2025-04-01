@@ -2040,3 +2040,31 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 # 1021 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
+
+LittlerootTown_Trigger_BlockPath::
+# 1025 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1026 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_Trigger_BlockPath_Text_0
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
+# 1028 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement 0
+# 1029 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+StopPlayer:
+# 1033 "data/maps/LittlerootTown/scripts.pory"
+	walk_down
+# 1034 "data/maps/LittlerootTown/scripts.pory"
+	walk_down
+# 1035 "data/maps/LittlerootTown/scripts.pory"
+	step_end
+
+LittlerootTown_Trigger_BlockPath_Text_0:
+# 1026 "data/maps/LittlerootTown/scripts.pory"
+	.string "It's dangerous to go out without a\n"
+	.string "Pokemon. I should go to the Lab...$"

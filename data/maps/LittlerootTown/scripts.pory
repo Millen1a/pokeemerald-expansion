@@ -1021,3 +1021,16 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Let's go to my LAB.$"
 
 `
+script LittlerootTown_Trigger_BlockPath{
+	lockall
+	msgbox(format("It's dangerous to go out without a Pokemon. I should go to the Lab..."))
+	applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+	waitmovement(0)
+	releaseall
+}
+
+movement StopPlayer{
+	walk_down
+	walk_down
+	step_end
+}
