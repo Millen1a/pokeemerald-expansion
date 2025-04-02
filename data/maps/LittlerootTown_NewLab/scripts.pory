@@ -1,21 +1,24 @@
 mapscripts LittlerootTown_NewLab_MapScripts{
-    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_NewLab_PokemonGet
-    MAP_SCRIPT_ON_FRAME_TABLE: LittlerootTown_NewLab_NorthEntry
+    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_NewLab_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_GET_NEWSTARTER, 0: LittlerootTown_NewPokemon
+    ]
 }
 
-script LittlerootTown_NewLab_PokemonGet{
+script LittlerootTown_NewLab_OnTransition{
     setflag(FLAG_SYS_POKEMON_GET)
 }
 
-script LittlerootTown_NewLab_NorthEntry{
+script LittlerootTown_NewPokemon{
     lockall
     msgbox(format("Oh, you're here!"))
+    waitmessage
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, PlayerWalkToTableNorth)
     waitmovement(0)
     applymovement(4, ProfLookatPlayer)
     msgbox(format("Go ahead and choose your pair."))
-    closemessage
+    waitmessage
     setvar(VAR_GET_NEWSTARTER,1)
     releaseall
 }
@@ -25,18 +28,14 @@ movement ProfLookatPlayer{
 }
 
 movement PlayerWalkToTableNorth{
-    walk_up
-    walk_up
-    walk_up
-    walk_up
-    walk_up
+    walk_up * 6
 }
 
 script LittlerootTown_NewLab_Block{
     lockall
     applymovement(4, ProfLookatPlayer)
-	msgbox(format("Hey! It's dangerous to go out without some Pokemons!"))
-    closemessage
+	message(format("Hey! It's dangerous to go out without some Pokemons!"))
+    waitmessage
 	applymovement(OBJ_EVENT_ID_PLAYER, NewLab_StopPlayer)
 	waitmovement(0)
 	releaseall
