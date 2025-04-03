@@ -15,15 +15,15 @@
   "connections": [
     {
       "map": "MAP_ROUTE101",
-      "offset": 0,
+      "offset": 6,
       "direction": "up"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 8,
-      "y": 5,
+      "x": 14,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -35,8 +35,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 10,
-      "y": 15,
+      "x": 22,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -48,8 +48,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 13,
-      "y": 16,
+      "x": 19,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -62,51 +62,92 @@
   ],
   "warp_events": [
     {
-      "x": 14,
+      "x": 20,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 5,
+      "x": 11,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 6,
-      "y": 16,
+      "x": 12,
+      "y": 20,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_NEW_LAB",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_PLAYER_HOME",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN_NEW_LAB",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 10,
+      "x": 16,
       "y": 1,
       "elevation": 0,
       "var": "VAR_GET_NEWSTARTER",
       "var_value": "0",
-      "script": "LittlerootTown_Trigger_BlockPath"
+      "script": "LittlerootTown_Trigger_BlockPathNorth"
     },
     {
       "type": "trigger",
-      "x": 11,
+      "x": 17,
       "y": 1,
       "elevation": 0,
       "var": "VAR_GET_NEWSTARTER",
       "var_value": "0",
-      "script": "LittlerootTown_Trigger_BlockPath"
+      "script": "LittlerootTown_Trigger_BlockPathNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_GET_NEWSTARTER",
+      "var_value": "0",
+      "script": "LittlerootTown_Trigger_BlockPathWest"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GET_NEWSTARTER",
+      "var_value": "0",
+      "script": "LittlerootTown_Trigger_BlockPathSouth"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_GET_NEWSTARTER",
+      "var_value": "0",
+      "script": "LittlerootTown_Trigger_BlockPathSouth"
     }
   ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 12,
+      "x": 19,
       "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -114,15 +155,15 @@
     },
     {
       "type": "sign",
-      "x": 5,
-      "y": 17,
+      "x": 11,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LittlerootTown_EventScript_BirchsLabSign"
     },
     {
       "type": "sign",
-      "x": 7,
+      "x": 13,
       "y": 8,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -130,7 +171,7 @@
     },
     {
       "type": "sign",
-      "x": 12,
+      "x": 18,
       "y": 8,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -138,8 +179,16 @@
     },
     {
       "type": "sign",
-      "x": 15,
-      "y": 16,
+      "x": 19,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 27,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"

@@ -107,9 +107,9 @@ LittlerootTown_NewLab_EventScript_Starter1_1:
 
 LittlerootTown_NewLab_EventScript_Starter1_2:
 # 52 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	showmonpic SPECIES_GOTHITA, 7, 4
+	showmonpic SPECIES_GOTHITA, 5, 4
 # 53 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	showmonpic SPECIES_RALTS, 8, 4
+	showmonpic SPECIES_RALTS, 10, 4
 # 54 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_0
 # 55 "data/maps/LittlerootTown_NewLab/scripts.pory"
@@ -124,12 +124,10 @@ LittlerootTown_NewLab_EventScript_Starter1_5:
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_NewLab_EventScript_Starter1_9
 LittlerootTown_NewLab_EventScript_Starter1_8:
-# 70 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	hidemonpic
 # 71 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	hidemonpic
 # 72 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	setvar VAR_GET_NEWSTARTER, 2
+	hidemonpic
 	goto LittlerootTown_NewLab_EventScript_Starter1_1
 
 LittlerootTown_NewLab_EventScript_Starter1_6:
@@ -154,6 +152,8 @@ LittlerootTown_NewLab_EventScript_Starter1_9:
 	setflag FLAG_RECEIVE_STARTER
 # 68 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_4
+# 69 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	setvar VAR_GET_NEWSTARTER, 2
 	goto LittlerootTown_NewLab_EventScript_Starter1_8
 
 
@@ -175,9 +175,9 @@ LittlerootTown_NewLab_EventScript_Starter2_1:
 
 LittlerootTown_NewLab_EventScript_Starter2_2:
 # 85 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	showmonpic SPECIES_TINKATINK, 7, 4
+	showmonpic SPECIES_TINKATINK, 5, 4
 # 86 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	showmonpic SPECIES_ROOKIDEE, 8, 4
+	showmonpic SPECIES_ROOKIDEE, 10, 4
 # 87 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter2_Text_0
 # 88 "data/maps/LittlerootTown_NewLab/scripts.pory"
@@ -192,12 +192,10 @@ LittlerootTown_NewLab_EventScript_Starter2_5:
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_NewLab_EventScript_Starter2_9
 LittlerootTown_NewLab_EventScript_Starter2_8:
-# 103 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	hidemonpic
 # 104 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	hidemonpic
 # 105 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	setvar VAR_GET_NEWSTARTER, 2
+	hidemonpic
 	goto LittlerootTown_NewLab_EventScript_Starter2_1
 
 LittlerootTown_NewLab_EventScript_Starter2_6:
@@ -222,6 +220,8 @@ LittlerootTown_NewLab_EventScript_Starter2_9:
 	setflag FLAG_RECEIVE_STARTER
 # 101 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_4
+# 102 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	setvar VAR_GET_NEWSTARTER, 2
 	goto LittlerootTown_NewLab_EventScript_Starter2_8
 
 
@@ -243,9 +243,9 @@ LittlerootTown_NewLab_EventScript_Starter3_1:
 
 LittlerootTown_NewLab_EventScript_Starter3_2:
 # 118 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	showmonpic SPECIES_EEVEE, 7, 4
+	showmonpic SPECIES_EEVEE, 5, 4
 # 119 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	showmonpic SPECIES_PIKACHU, 8, 4
+	showmonpic SPECIES_PIKACHU, 10, 4
 # 120 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter3_Text_0
 # 121 "data/maps/LittlerootTown_NewLab/scripts.pory"
@@ -260,12 +260,10 @@ LittlerootTown_NewLab_EventScript_Starter3_5:
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_NewLab_EventScript_Starter3_9
 LittlerootTown_NewLab_EventScript_Starter3_8:
-# 136 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	hidemonpic
 # 137 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	hidemonpic
 # 138 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	setvar VAR_GET_NEWSTARTER, 2
+	hidemonpic
 	goto LittlerootTown_NewLab_EventScript_Starter3_1
 
 LittlerootTown_NewLab_EventScript_Starter3_6:
@@ -290,6 +288,8 @@ LittlerootTown_NewLab_EventScript_Starter3_9:
 	setflag FLAG_RECEIVE_STARTER
 # 134 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_4
+# 135 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	setvar VAR_GET_NEWSTARTER, 2
 	goto LittlerootTown_NewLab_EventScript_Starter3_8
 
 

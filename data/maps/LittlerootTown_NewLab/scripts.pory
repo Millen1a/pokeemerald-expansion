@@ -49,8 +49,8 @@ movement NewLab_StopPlayer{
 script LittlerootTown_NewLab_EventScript_Starter1 {
     lockall
     if(!flag(FLAG_RECEIVE_STARTER)){
-        showmonpic(SPECIES_GOTHITA,7,4)
-        showmonpic(SPECIES_RALTS,8,4)
+        showmonpic(SPECIES_GOTHITA,5,4)
+        showmonpic(SPECIES_RALTS,10,4)
         msgbox(format("Ralts and Gothita. These two seems inseparable when in our care, and none of us have the heart to separate them now."))
         msgbox(format("Regardless, if you're looking for Pokemon with strong mental prowess, these two would serve you well."))
         msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
@@ -66,10 +66,10 @@ script LittlerootTown_NewLab_EventScript_Starter1 {
             removeobject(1)
             setflag(FLAG_RECEIVE_STARTER)
             msgbox(format("Alright. Take care of them."))
+            setvar(VAR_GET_NEWSTARTER,2)
         }
         hidemonpic
         hidemonpic
-        setvar(VAR_GET_NEWSTARTER,2)
     }
     else{
         applymovement(4, ProfLookatPlayer)
@@ -82,8 +82,8 @@ script LittlerootTown_NewLab_EventScript_Starter1 {
 script LittlerootTown_NewLab_EventScript_Starter2 {
     lockall
     if(!flag(FLAG_RECEIVE_STARTER)){
-        showmonpic(SPECIES_TINKATINK,7,4)
-        showmonpic(SPECIES_ROOKIDEE,8,4)
+        showmonpic(SPECIES_TINKATINK,5,4)
+        showmonpic(SPECIES_ROOKIDEE,10,4)
         msgbox(format("Tinkatink and Rookidee. Considering the relationship of these specieses in the wild, it's surprising how attached these two are."))
         msgbox(format("That's aside, with Corviknight's speed and Tinkaton's physical power, they would serve you well in battle."))
         msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
@@ -99,10 +99,10 @@ script LittlerootTown_NewLab_EventScript_Starter2 {
             removeobject(2)
             setflag(FLAG_RECEIVE_STARTER)
             msgbox(format("Alright. Take care of them."))
+            setvar(VAR_GET_NEWSTARTER,2)
         }
         hidemonpic
         hidemonpic
-        setvar(VAR_GET_NEWSTARTER,2)
     }
     else{
         applymovement(4, ProfLookatPlayer)
@@ -115,8 +115,8 @@ script LittlerootTown_NewLab_EventScript_Starter2 {
 script LittlerootTown_NewLab_EventScript_Starter3{
     lockall
     if(!flag(FLAG_RECEIVE_STARTER)){
-        showmonpic(SPECIES_EEVEE,7,4)
-        showmonpic(SPECIES_PIKACHU,8,4)
+        showmonpic(SPECIES_EEVEE,5,4)
+        showmonpic(SPECIES_PIKACHU,10,4)
         msgbox(format("Ah these two. The team's favorite. Very well behaved we nearly just want to give them permanent residence as our mascot!"))
         msgbox(format("Haha, well, that's aside, they will make a very versatile team with some serious, diligent care."))
         msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
@@ -132,10 +132,10 @@ script LittlerootTown_NewLab_EventScript_Starter3{
             removeobject(3)
             setflag(FLAG_RECEIVE_STARTER)
             msgbox(format("Alright. Take care of them."))
+            setvar(VAR_GET_NEWSTARTER,2)
         }
         hidemonpic
         hidemonpic
-        setvar(VAR_GET_NEWSTARTER,2)
     }
     else{
         applymovement(4, ProfLookatPlayer)

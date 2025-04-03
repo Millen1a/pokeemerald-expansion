@@ -94,8 +94,8 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
-      "width": 24,
-      "height": 24,
+      "width": 44,
+      "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
@@ -4420,6 +4420,26 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/LittlerootTown_NewLab/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_NewLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYER_HOME",
+      "name": "PlayerHome_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/PlayerHome/border.bin",
+      "blockdata_filepath": "data/layouts/PlayerHome/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYER_HOME_BEDROOM",
+      "name": "PlayerHomeBedroom_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/PlayerHomeBedroom/border.bin",
+      "blockdata_filepath": "data/layouts/PlayerHomeBedroom/map.bin"
     }
   ]
 }

@@ -1,0 +1,72 @@
+mapscripts PlayerHomeBedroom_MapScripts {}
+
+script PlayerHomeBedroom_Blocker {
+    lockall
+    msgbox(format("Wait.\nI wonder what time it is."))
+    waitmessage
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+    waitmovement(0)
+    releaseall
+}
+
+script PlayerHomeBedroom_EventScript_Wallclock {
+    if(!flag(FLAG_SET_WALL_CLOCK)) {
+        lockall
+        msgbox(format("Oh! It seems the clock is off.\p"
+                "Better fix it before I set off."))
+        call (PlayerHomeBedroom_SetWallClock)
+        delay (20)
+        setflag (FLAG_SET_WALL_CLOCK)
+        setvar (VAR_ADVENTURE_STATE, 1)
+        call (PlayerHomeBedroom_ClockNote)
+    }
+
+    else {
+        lockall
+        call (PlayerHomeBedroom_CheckWallClock)
+        delay (20)
+    }
+releaseall
+}
+
+script PlayerHomeBedroom_SetWallClock {
+    fadescreen (FADE_TO_BLACK)
+	special (StartWallClock)
+	waitstate
+	return
+}
+
+script PlayerHomeBedroom_CheckWallClock {
+    incrementgamestat (GAME_STAT_CHECKED_CLOCK)
+	fadescreen (FADE_TO_BLACK)
+	special (Special_ViewWallClock)
+	waitstate
+	releaseall
+	end
+}
+
+script PlayerHomeBedroom_ClockNote {
+    msgbox (format("Oh? What's this under the clock?"))
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
+    msgbox (format("Oh right! I taped a note here!\p"
+            "It's a reminder to go to the Professor to get my first Pokemons!"))
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    msgbox (format("I better get going then."))
+    closemessage
+    }
+
+script PlayerHomeBedroom_ResearchNote {
+    lockall
+    msgbox (format("My research note. It's full of notes about this region's Pokemon and nature.\p"
+            "Glad the Professor let me intern under him nowadays."))
+    releaseall
+}
+
+script PlayerHomeBedroom_PC {
+    lockall
+    msgbox (format("My PC. Unfortunately it's currently broken, tho..."))
+    releaseall
+}
