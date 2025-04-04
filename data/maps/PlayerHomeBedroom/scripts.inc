@@ -84,13 +84,13 @@ PlayerHomeBedroom_ClockNote::
 # 52 "data/maps/PlayerHomeBedroom/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, PlayerHomeBedroom_ClockNote_Movement_0
 # 53 "data/maps/PlayerHomeBedroom/scripts.pory"
-	msgbox PlayerHomeBedroom_ClockNote_Text_2
+	msgbox PlayerHomeBedroom_ClockNote_Text_1
 # 55 "data/maps/PlayerHomeBedroom/scripts.pory"
 	waitmessage
 # 56 "data/maps/PlayerHomeBedroom/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, PlayerHomeBedroom_ClockNote_Movement_1
 # 57 "data/maps/PlayerHomeBedroom/scripts.pory"
-	msgbox PlayerHomeBedroom_ClockNote_Text_3
+	msgbox PlayerHomeBedroom_ClockNote_Text_2
 # 58 "data/maps/PlayerHomeBedroom/scripts.pory"
 	closemessage
 	return
@@ -151,13 +151,10 @@ PlayerHomeBedroom_ClockNote_Text_0:
 PlayerHomeBedroom_ClockNote_Text_1:
 # 53 "data/maps/PlayerHomeBedroom/scripts.pory"
 	.string "Oh right! I taped a note here!\p"
-	.string "$"
+	.string "It's a reminder to go to the Professor\n"
+	.string "to get my first Pokemons!$"
 
 PlayerHomeBedroom_ClockNote_Text_2:
-# 54 "data/maps/PlayerHomeBedroom/scripts.pory"
-	.string "It's a reminder to go to the Professor to get my first Pokemons!$"
-
-PlayerHomeBedroom_ClockNote_Text_3:
 # 57 "data/maps/PlayerHomeBedroom/scripts.pory"
 	.string "I better get going then.$"
 

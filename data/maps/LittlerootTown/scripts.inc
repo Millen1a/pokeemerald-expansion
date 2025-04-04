@@ -2041,13 +2041,13 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 # 1021 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
 
-LittlerootTown_Trigger_BlockPath::
+LittlerootTown_Trigger_BlockPathNorth::
 # 1025 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1026 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_Trigger_BlockPath_Text_0
+	msgbox LittlerootTown_Trigger_BlockPathNorth_Text_0
 # 1027 "data/maps/LittlerootTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Trigger_BlockPathNorth_Movement_0
 # 1028 "data/maps/LittlerootTown/scripts.pory"
 	waitmovement 0
 # 1029 "data/maps/LittlerootTown/scripts.pory"
@@ -2055,16 +2055,76 @@ LittlerootTown_Trigger_BlockPath::
 	return
 
 
-# 1032 "data/maps/LittlerootTown/scripts.pory"
-StopPlayer:
+LittlerootTown_Trigger_BlockPathWest::
 # 1033 "data/maps/LittlerootTown/scripts.pory"
-	walk_down
+	lockall
 # 1034 "data/maps/LittlerootTown/scripts.pory"
-	walk_down
+	msgbox LittlerootTown_Trigger_BlockPathNorth_Text_0
 # 1035 "data/maps/LittlerootTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Trigger_BlockPathWest_Movement_0
+# 1036 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement 0
+# 1037 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
+LittlerootTown_Trigger_BlockPathSouth::
+# 1041 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1042 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_Trigger_BlockPathNorth_Text_0
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Trigger_BlockPathSouth_Movement_0
+# 1044 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement 0
+# 1045 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
+PlayerHome_Sign::
+# 1049 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1050 "data/maps/LittlerootTown/scripts.pory"
+	msgbox PlayerHome_Sign_Text_0
+# 1052 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1053 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+LittlerootTown_Trigger_BlockPathNorth_Movement_0:
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	walk_down
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	walk_down
 	step_end
 
-LittlerootTown_Trigger_BlockPath_Text_0:
+# 1035 "data/maps/LittlerootTown/scripts.pory"
+LittlerootTown_Trigger_BlockPathWest_Movement_0:
+# 1035 "data/maps/LittlerootTown/scripts.pory"
+	walk_left
+# 1035 "data/maps/LittlerootTown/scripts.pory"
+	walk_left
+	step_end
+
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+LittlerootTown_Trigger_BlockPathSouth_Movement_0:
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	walk_up
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	walk_up
+	step_end
+
+LittlerootTown_Trigger_BlockPathNorth_Text_0:
 # 1026 "data/maps/LittlerootTown/scripts.pory"
-	.string "It's dangerous to go out without a\n"
-	.string "Pokemon. I should go to the Lab...$"
+	.string "It's dangerous to go further without a\n"
+	.string "Pokemon...$"
+
+PlayerHome_Sign_Text_0:
+# 1050 "data/maps/LittlerootTown/scripts.pory"
+	.string "{PLAYER}'s HOUSE\p"
+	.string "Huh, wonder who's that fellow is?$"
