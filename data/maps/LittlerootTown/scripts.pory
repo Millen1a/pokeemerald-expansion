@@ -1037,10 +1037,18 @@ script LittlerootTown_Trigger_BlockPathWest{
 	releaseall
 }
 
-script LittlerootTown_Trigger_BlockPathEast{
+script LittlerootTown_Trigger_BlockPathSouth{
 	lockall
 	msgbox(format("It's dangerous to go further without a Pokemon..."))
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*2))
 	waitmovement(0)
+	releaseall
+}
+
+script PlayerHome_Sign{
+	lockall
+	msgbox(format("{PLAYER}'s HOUSE\p"
+			"Huh, wonder who's that fellow is?"))
+	waitmessage
 	releaseall
 }
