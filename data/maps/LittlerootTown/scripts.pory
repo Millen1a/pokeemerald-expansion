@@ -1037,6 +1037,14 @@ script LittlerootTown_Trigger_BlockPathWest{
 	releaseall
 }
 
+script LittlerootTown_Trigger_BlockPathEast{
+	lockall
+	msgbox(format("It's dangerous to go further without a Pokemon..."))
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right*2))
+	waitmovement(0)
+	releaseall
+}
+
 script LittlerootTown_Trigger_BlockPathSouth{
 	lockall
 	msgbox(format("It's dangerous to go further without a Pokemon..."))

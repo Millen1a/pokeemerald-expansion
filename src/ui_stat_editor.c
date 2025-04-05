@@ -725,12 +725,12 @@ static void PrintMonStats()
     }
 
     nature = GetNature(ReturnPartyMon());
-    StringCopy(gStringVar2, gNatureNamePointers[nature]);
+    StringCopy(gStringVar2, gNaturesInfo[nature].name);
     AddTextPrinterParameterized4(WINDOW_3, FONT_SMALL_NARROW, 4, 50, 0, 0, sMenuWindowFontColors[FONT_WHITE], 0xFF, gStringVar2);
 
-    StringCopy(gStringVar2, gAbilityNames[gSpeciesInfo[sStatEditorDataPtr->speciesID].abilities[GetMonData(ReturnPartyMon(), MON_DATA_ABILITY_NUM)]]);
+    StringCopy(gStringVar2, gAbilitiesInfo[gSpeciesInfo[sStatEditorDataPtr->speciesID].abilities[GetMonData(ReturnPartyMon(), MON_DATA_ABILITY_NUM)]].name);
     AddTextPrinterParameterized4(WINDOW_3, FONT_SMALL_NARROW, 4, 34, 0, 0, sMenuWindowFontColors[FONT_WHITE], 0xFF, gStringVar2);
-
+    
     PutWindowTilemap(WINDOW_3);
     CopyWindowToVram(WINDOW_3, 3);
 
@@ -918,7 +918,7 @@ static void ChangeAndUpdateStat()
 
 #define STAT_MINIMUM          0  
 #define IV_MAX_SINGLE_STAT    31   
-#define EV_MAX_SINGLE_STAT    255   
+#define EV_MAX_SINGLE_STAT    252   
 #define EV_MAX_TOTAL          510            
                 
 #define EDITING_EVS     0
@@ -942,7 +942,7 @@ static void HandleEditingStatInput(u32 input)
         return;
     }
 
-    #define INCREASE_DECREASE_AMOUNT 1
+    #define INCREASE_DECREASE_AMOUNT 4
 
     switch(input)
     {

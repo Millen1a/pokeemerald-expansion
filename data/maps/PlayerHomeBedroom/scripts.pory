@@ -5,7 +5,7 @@ script PlayerHomeBedroom_Blocker {
     msgbox(format("Wait.\nI wonder what time it is."))
     waitmessage
     closemessage
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right*2))
     waitmovement(0)
     releaseall
 }
@@ -47,11 +47,10 @@ script PlayerHomeBedroom_CheckWallClock {
 }
 
 script PlayerHomeBedroom_ClockNote {
-    msgbox (format("Oh? What's this under the clock?"))
+    msgbox (format("Hm? What's this note on the wall?"))
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
-    msgbox (format("Oh right! I taped a note here!\p"
-            "It's a reminder to go to the Professor to get my first Pokemons!"))
+    msgbox (format("Oh right! It's a reminder to go to the Professor!"))
     waitmessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
     msgbox (format("I better get going then."))
@@ -67,6 +66,6 @@ script PlayerHomeBedroom_ResearchNote {
 
 script PlayerHomeBedroom_PC {
     lockall
-    msgbox (format("My PC. Unfortunately it's currently broken, tho..."))
+    msgbox (format("My PC. Unfortunately it's currently broken..."))
     releaseall
 }

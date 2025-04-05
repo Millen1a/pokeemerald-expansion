@@ -14,12 +14,22 @@ script LittlerootTown_NewPokemon{
     msgbox(format("Oh, you're here!"))
     waitmessage
     closemessage
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*6))
-    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*6, walk_left))
     applymovement(4, moves(face_player))
-    msgbox(format("Go ahead and choose your pair."))
+    waitmovement(0)
+    msgbox(format("Thanks for coming! Now as you know, you've been interning under me for a while.\p"
+            "But, I think you're ready to  spread your wings and explore the region proper.\p"))
+    closemessage
+    applymovement(4, moves(walk_right*2, face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right*2, face_up))
+    waitmovement(0)
+    msgbox(format("So we pick these little ones to help you on your journeys."))
+    applymovement(4, moves(face_player))
+    waitmovement(0)
+    msgbox(format("Go ahead. Please choose which of these two you'd like to bring along."))
     waitmessage
-    applymovement(4, moves(face_original_direction))
+    applymovement(4, moves(walk_left, face_original_direction))
+    waitmovement(0)
     setvar(VAR_GET_NEWSTARTER,1)
     releaseall
 }
@@ -40,8 +50,8 @@ script LittlerootTown_NewLab_EventScript_Starter1 {
     if(!flag(FLAG_RECEIVE_STARTER)){
         showmonpic(SPECIES_GOTHITA,4,4)
         showmonpic(SPECIES_RALTS,12,4)
-        msgbox(format("Ralts and Gothita. These two seems inseparable when in our care, and none of us have the heart to separate them now.\p"
-        "Regardless, if you're looking for Pokemon with strong mental prowess, these two would serve you well."))
+        msgbox(format("Ralts and Gothita. These two seems inseparable when in our care.\p"
+        "If you're looking for Pokemons with strong mental prowess, these two would serve you well."))
         msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == NO) {
             msgbox(format("It's fine, take your time."))
@@ -73,8 +83,8 @@ script LittlerootTown_NewLab_EventScript_Starter2 {
     if(!flag(FLAG_RECEIVE_STARTER)){
         showmonpic(SPECIES_TINKATINK,4,4)
         showmonpic(SPECIES_ROOKIDEE,12,4)
-        msgbox(format("Tinkatink and Rookidee. Considering the relationship of these specieses in the wild, it's surprising how attached these two are.\p"
-        "That's aside, with Corviknight's speed and Tinkaton's physical power, they would serve you well in battle."))
+        msgbox(format("Tinkatink and Rookidee. It's surprising how attached these two are.\p"
+        "With Corviknight's speed and Tinkaton's physical power, they would serve you well against tough foes."))
         msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == NO) {
             msgbox(format("It's fine, take your time."))
@@ -106,8 +116,8 @@ script LittlerootTown_NewLab_EventScript_Starter3{
     if(!flag(FLAG_RECEIVE_STARTER)){
         showmonpic(SPECIES_EEVEE,4,4)
         showmonpic(SPECIES_PIKACHU,12,4)
-        msgbox(format("Ah these two. The team's favorite. Very well behaved we nearly just want to give them permanent residence as our mascot!\p"
-        "Haha, well, that's aside, they will make a very versatile team with some serious, diligent care."))
+        msgbox(format("The team's favorite. Very well behaved!\p"
+        "They will make a very versatile team with some serious, diligent care."))
         msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
         if(var(VAR_RESULT) == NO) {
             msgbox(format("It's fine, take your time."))
@@ -132,4 +142,10 @@ script LittlerootTown_NewLab_EventScript_Starter3{
         closemessage
     }
     releaseall
+}
+
+script LittlerootTown_NewLab_PokeDexNavGetAsk{
+    if(!flag(FLAG_SYS_POKEDEX_GET) && !flag(FLAG_SYS_POKENAV_GET)){
+
+    }   
 }
