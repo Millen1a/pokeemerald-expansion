@@ -85,33 +85,33 @@ PlayerHomeBedroom_ClockNote::
 	applymovement OBJ_EVENT_ID_PLAYER, PlayerHomeBedroom_ClockNote_Movement_0
 # 53 "data/maps/PlayerHomeBedroom/scripts.pory"
 	msgbox PlayerHomeBedroom_ClockNote_Text_1
-# 55 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 54 "data/maps/PlayerHomeBedroom/scripts.pory"
 	waitmessage
-# 56 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 55 "data/maps/PlayerHomeBedroom/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, PlayerHomeBedroom_ClockNote_Movement_1
-# 57 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 56 "data/maps/PlayerHomeBedroom/scripts.pory"
 	msgbox PlayerHomeBedroom_ClockNote_Text_2
-# 58 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 57 "data/maps/PlayerHomeBedroom/scripts.pory"
 	closemessage
 	return
 
 
 PlayerHomeBedroom_ResearchNote::
-# 62 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 61 "data/maps/PlayerHomeBedroom/scripts.pory"
 	lockall
-# 63 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 62 "data/maps/PlayerHomeBedroom/scripts.pory"
 	msgbox PlayerHomeBedroom_ResearchNote_Text_0
-# 65 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 64 "data/maps/PlayerHomeBedroom/scripts.pory"
 	releaseall
 	return
 
 
 PlayerHomeBedroom_PC::
-# 69 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 68 "data/maps/PlayerHomeBedroom/scripts.pory"
 	lockall
-# 70 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 69 "data/maps/PlayerHomeBedroom/scripts.pory"
 	msgbox PlayerHomeBedroom_PC_Text_0
-# 71 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 70 "data/maps/PlayerHomeBedroom/scripts.pory"
 	releaseall
 	return
 
@@ -119,7 +119,9 @@ PlayerHomeBedroom_PC::
 # 8 "data/maps/PlayerHomeBedroom/scripts.pory"
 PlayerHomeBedroom_Blocker_Movement_0:
 # 8 "data/maps/PlayerHomeBedroom/scripts.pory"
-	walk_left
+	walk_right
+# 8 "data/maps/PlayerHomeBedroom/scripts.pory"
+	walk_right
 	step_end
 
 # 52 "data/maps/PlayerHomeBedroom/scripts.pory"
@@ -128,9 +130,9 @@ PlayerHomeBedroom_ClockNote_Movement_0:
 	emote_exclamation_mark
 	step_end
 
-# 56 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 55 "data/maps/PlayerHomeBedroom/scripts.pory"
 PlayerHomeBedroom_ClockNote_Movement_1:
-# 56 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 55 "data/maps/PlayerHomeBedroom/scripts.pory"
 	face_left
 	step_end
 
@@ -146,26 +148,25 @@ PlayerHomeBedroom_EventScript_Wallclock_Text_0:
 
 PlayerHomeBedroom_ClockNote_Text_0:
 # 50 "data/maps/PlayerHomeBedroom/scripts.pory"
-	.string "Oh? What's this under the clock?$"
+	.string "Hm? What's this note on the wall?$"
 
 PlayerHomeBedroom_ClockNote_Text_1:
 # 53 "data/maps/PlayerHomeBedroom/scripts.pory"
-	.string "Oh right! I taped a note here!\p"
-	.string "It's a reminder to go to the Professor\n"
-	.string "to get my first Pokemons!$"
+	.string "Oh right! It's a reminder to go to the\n"
+	.string "Professor!$"
 
 PlayerHomeBedroom_ClockNote_Text_2:
-# 57 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 56 "data/maps/PlayerHomeBedroom/scripts.pory"
 	.string "I better get going then.$"
 
 PlayerHomeBedroom_ResearchNote_Text_0:
-# 63 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 62 "data/maps/PlayerHomeBedroom/scripts.pory"
 	.string "My research note. It's full of notes\n"
 	.string "about this region's Pokemon and nature.\p"
 	.string "Glad the Professor let me intern under\n"
 	.string "him nowadays.$"
 
 PlayerHomeBedroom_PC_Text_0:
-# 70 "data/maps/PlayerHomeBedroom/scripts.pory"
+# 69 "data/maps/PlayerHomeBedroom/scripts.pory"
 	.string "My PC. Unfortunately it's currently\n"
-	.string "broken, tho...$"
+	.string "broken...$"

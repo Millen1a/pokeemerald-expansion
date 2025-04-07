@@ -2069,13 +2069,13 @@ LittlerootTown_Trigger_BlockPathWest::
 	return
 
 
-LittlerootTown_Trigger_BlockPathSouth::
+LittlerootTown_Trigger_BlockPathEast::
 # 1041 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1042 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_Trigger_BlockPathNorth_Text_0
 # 1043 "data/maps/LittlerootTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Trigger_BlockPathSouth_Movement_0
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Trigger_BlockPathEast_Movement_0
 # 1044 "data/maps/LittlerootTown/scripts.pory"
 	waitmovement 0
 # 1045 "data/maps/LittlerootTown/scripts.pory"
@@ -2083,14 +2083,28 @@ LittlerootTown_Trigger_BlockPathSouth::
 	return
 
 
-PlayerHome_Sign::
+LittlerootTown_Trigger_BlockPathSouth::
 # 1049 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1050 "data/maps/LittlerootTown/scripts.pory"
-	msgbox PlayerHome_Sign_Text_0
+	msgbox LittlerootTown_Trigger_BlockPathNorth_Text_0
+# 1051 "data/maps/LittlerootTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Trigger_BlockPathSouth_Movement_0
 # 1052 "data/maps/LittlerootTown/scripts.pory"
-	waitmessage
+	waitmovement 0
 # 1053 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
+PlayerHome_Sign::
+# 1057 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1058 "data/maps/LittlerootTown/scripts.pory"
+	msgbox PlayerHome_Sign_Text_0
+# 1060 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1061 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
@@ -2112,10 +2126,18 @@ LittlerootTown_Trigger_BlockPathWest_Movement_0:
 	step_end
 
 # 1043 "data/maps/LittlerootTown/scripts.pory"
+LittlerootTown_Trigger_BlockPathEast_Movement_0:
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	walk_right
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	walk_right
+	step_end
+
+# 1051 "data/maps/LittlerootTown/scripts.pory"
 LittlerootTown_Trigger_BlockPathSouth_Movement_0:
-# 1043 "data/maps/LittlerootTown/scripts.pory"
+# 1051 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
-# 1043 "data/maps/LittlerootTown/scripts.pory"
+# 1051 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
 	step_end
 
@@ -2125,6 +2147,6 @@ LittlerootTown_Trigger_BlockPathNorth_Text_0:
 	.string "Pokemon...$"
 
 PlayerHome_Sign_Text_0:
-# 1050 "data/maps/LittlerootTown/scripts.pory"
+# 1058 "data/maps/LittlerootTown/scripts.pory"
 	.string "{PLAYER}'s HOUSE\p"
 	.string "Huh, wonder who's that fellow is?$"

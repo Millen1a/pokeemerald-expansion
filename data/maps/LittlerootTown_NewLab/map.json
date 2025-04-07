@@ -96,8 +96,8 @@
       "x": 6,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_GET_NEWSTARTER",
-      "var_value": "1",
+      "var": "VAR_ADVENTURE_STATE",
+      "var_value": "2",
       "script": "LittlerootTown_NewLab_Block"
     },
     {
@@ -105,8 +105,8 @@
       "x": 7,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_GET_NEWSTARTER",
-      "var_value": "1",
+      "var": "VAR_ADVENTURE_STATE",
+      "var_value": "2",
       "script": "LittlerootTown_NewLab_Block"
     },
     {
@@ -114,8 +114,8 @@
       "x": 8,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_GET_NEWSTARTER",
-      "var_value": "1",
+      "var": "VAR_ADVENTURE_STATE",
+      "var_value": "2",
       "script": "LittlerootTown_NewLab_Block"
     },
     {
@@ -123,8 +123,8 @@
       "x": 9,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_GET_NEWSTARTER",
-      "var_value": "1",
+      "var": "VAR_ADVENTURE_STATE",
+      "var_value": "2",
       "script": "LittlerootTown_NewLab_Block"
     },
     {
@@ -132,8 +132,8 @@
       "x": 10,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_GET_NEWSTARTER",
-      "var_value": "1",
+      "var": "VAR_ADVENTURE_STATE",
+      "var_value": "2",
       "script": "LittlerootTown_NewLab_Block"
     },
     {
@@ -141,8 +141,8 @@
       "x": 11,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_GET_NEWSTARTER",
-      "var_value": "1",
+      "var": "VAR_ADVENTURE_STATE",
+      "var_value": "2",
       "script": "LittlerootTown_NewLab_Block"
     },
     {
@@ -150,8 +150,8 @@
       "x": 12,
       "y": 7,
       "elevation": 0,
-      "var": "VAR_GET_NEWSTARTER",
-      "var_value": "1",
+      "var": "VAR_ADVENTURE_STATE",
+      "var_value": "2",
       "script": "LittlerootTown_NewLab_Block"
     }
   ],

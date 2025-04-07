@@ -7,7 +7,7 @@ LittlerootTown_NewLab_MapScripts::
 
 LittlerootTown_NewLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 4 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	map_script_2 VAR_GET_NEWSTARTER, 0, LittlerootTown_NewPokemon
+	map_script_2 VAR_ADVENTURE_STATE, 1, LittlerootTown_NewPokemon
 	.2byte 0
 
 
@@ -29,238 +29,280 @@ LittlerootTown_NewPokemon::
 # 17 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_NewPokemon_Movement_0
 # 18 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	waitmovement 0
-# 19 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	applymovement 4, LittlerootTown_NewPokemon_Movement_1
+# 19 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	waitmovement 0
 # 20 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewPokemon_Text_1
 # 21 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	waitmessage
 # 22 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	applymovement 4, LittlerootTown_NewPokemon_Movement_2
+	closemessage
 # 23 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	setvar VAR_GET_NEWSTARTER, 1
+	applymovement 4, LittlerootTown_NewPokemon_Movement_2
 # 24 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	releaseall
-	return
-
-
-LittlerootTown_NewLab_Block::
-# 28 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	lockall
-# 29 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_NewPokemon_Movement_2
+# 25 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	waitmovement 0
+# 26 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	msgbox LittlerootTown_NewPokemon_Text_2
+# 27 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	applymovement 4, LittlerootTown_NewPokemon_Movement_1
+# 28 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	waitmovement 0
+# 29 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	msgbox LittlerootTown_NewPokemon_Text_3
 # 30 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	message LittlerootTown_NewLab_Block_Text_0
-# 31 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	waitmessage
+# 31 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	closemessage
 # 32 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_NewLab_Block_Movement_0
+	applymovement 4, LittlerootTown_NewPokemon_Movement_3
 # 33 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	waitmovement 0
 # 34 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	applymovement 4, LittlerootTown_NewPokemon_Movement_2
+	setvar VAR_ADVENTURE_STATE, 2
 # 35 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	releaseall
 	return
 
 
-LittlerootTown_NewLab_EventScript_Starter1::
+LittlerootTown_NewLab_Block::
 # 39 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	lockall
 # 40 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	goto_if_unset FLAG_RECEIVE_STARTER, LittlerootTown_NewLab_EventScript_Starter1_2
-# 64 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	applymovement 4, LittlerootTown_NewPokemon_Movement_1
-# 65 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 41 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	message LittlerootTown_NewLab_Block_Text_0
+# 42 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	waitmessage
+# 43 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_NewLab_Block_Movement_0
+# 44 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	waitmovement 0
+# 45 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	applymovement 4, LittlerootTown_NewLab_Block_Movement_1
+# 46 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	releaseall
+	return
+
+
+LittlerootTown_NewLab_EventScript_Starter1::
+# 50 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	lockall
+# 51 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	goto_if_unset FLAG_RECEIVE_STARTER, LittlerootTown_NewLab_EventScript_Starter1_2
+# 76 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	applymovement 4, LittlerootTown_NewPokemon_Movement_1
+# 77 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_4
-# 66 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 78 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	closemessage
 LittlerootTown_NewLab_EventScript_Starter1_1:
-# 68 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 80 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	releaseall
 	return
 
 LittlerootTown_NewLab_EventScript_Starter1_2:
-# 41 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 52 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	showmonpic SPECIES_GOTHITA, 4, 4
-# 42 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 53 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	showmonpic SPECIES_RALTS, 12, 4
-# 43 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 54 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_0
-# 45 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 56 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_1, MSGBOX_YESNO
-# 46 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 57 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq LittlerootTown_NewLab_EventScript_Starter1_6
 LittlerootTown_NewLab_EventScript_Starter1_5:
-# 49 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 60 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_NewLab_EventScript_Starter1_9
 LittlerootTown_NewLab_EventScript_Starter1_8:
-# 60 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 72 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	hidemonpic
-# 61 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 73 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	hidemonpic
 	goto LittlerootTown_NewLab_EventScript_Starter1_1
 
 LittlerootTown_NewLab_EventScript_Starter1_6:
-# 47 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 58 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_2
 	goto LittlerootTown_NewLab_EventScript_Starter1_5
 
 LittlerootTown_NewLab_EventScript_Starter1_9:
-# 50 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 61 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	givemon SPECIES_GOTHITA, 5, ITEM_ORAN_BERRY, ITEM_POKE_BALL, NATURE_HARDY, , MON_FEMALE, , , , , , , 31, 31, 31, 31, 31, 31
-# 51 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 62 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 52 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 63 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	givemon SPECIES_RALTS, 5, ITEM_ORAN_BERRY, ITEM_PREMIER_BALL, NATURE_SERIOUS, , MON_FEMALE, , , , , , , 31, 31, 31, 31, 31, 31
-# 53 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 64 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 54 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 65 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	setflag FLAG_RECEIVE_STARTERPAIR1
-# 55 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 66 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	removeobject 1
-# 56 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 67 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	setflag FLAG_RECEIVE_STARTER
-# 57 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 68 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_3
-# 58 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	setvar VAR_GET_NEWSTARTER, 2
+# 69 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	setvar VAR_STARTER_MON, 1
+# 70 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	setvar VAR_ADVENTURE_STATE, 3
 	goto LittlerootTown_NewLab_EventScript_Starter1_8
 
 
 LittlerootTown_NewLab_EventScript_Starter2::
-# 72 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 84 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	lockall
-# 73 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 85 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	goto_if_unset FLAG_RECEIVE_STARTER, LittlerootTown_NewLab_EventScript_Starter2_2
-# 97 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 110 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	applymovement 4, LittlerootTown_NewPokemon_Movement_1
-# 98 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 111 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_4
-# 99 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 112 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	closemessage
 LittlerootTown_NewLab_EventScript_Starter2_1:
-# 101 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 114 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	releaseall
 	return
 
 LittlerootTown_NewLab_EventScript_Starter2_2:
-# 74 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 86 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	showmonpic SPECIES_TINKATINK, 4, 4
-# 75 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 87 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	showmonpic SPECIES_ROOKIDEE, 12, 4
-# 76 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 88 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter2_Text_0
-# 78 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 90 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_1, MSGBOX_YESNO
-# 79 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 91 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq LittlerootTown_NewLab_EventScript_Starter2_6
 LittlerootTown_NewLab_EventScript_Starter2_5:
-# 82 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 94 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_NewLab_EventScript_Starter2_9
 LittlerootTown_NewLab_EventScript_Starter2_8:
-# 93 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 106 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	hidemonpic
-# 94 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 107 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	hidemonpic
 	goto LittlerootTown_NewLab_EventScript_Starter2_1
 
 LittlerootTown_NewLab_EventScript_Starter2_6:
-# 80 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 92 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_2
 	goto LittlerootTown_NewLab_EventScript_Starter2_5
 
 LittlerootTown_NewLab_EventScript_Starter2_9:
-# 83 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 95 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	givemon SPECIES_TINKATINK, 5, ITEM_ORAN_BERRY, ITEM_POKE_BALL, NATURE_HARDY, , MON_FEMALE, , , , , , , 31, 31, 31, 31, 31, 31
-# 84 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 96 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 85 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 97 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	givemon SPECIES_ROOKIDEE, 5, ITEM_ORAN_BERRY, ITEM_PREMIER_BALL, NATURE_SERIOUS, , MON_FEMALE, , , , , , , 31, 31, 31, 31, 31, 31
-# 86 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 98 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 87 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 99 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	setflag FLAG_RECEIVE_STARTERPAIR2
-# 88 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 100 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	removeobject 2
-# 89 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 101 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	setflag FLAG_RECEIVE_STARTER
-# 90 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 102 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_3
-# 91 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	setvar VAR_GET_NEWSTARTER, 2
+# 103 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	setvar VAR_STARTER_MON, 2
+# 104 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	setvar VAR_ADVENTURE_STATE, 3
 	goto LittlerootTown_NewLab_EventScript_Starter2_8
 
 
 LittlerootTown_NewLab_EventScript_Starter3::
-# 105 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 118 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	lockall
-# 106 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 119 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	goto_if_unset FLAG_RECEIVE_STARTER, LittlerootTown_NewLab_EventScript_Starter3_2
-# 130 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 144 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	applymovement 4, LittlerootTown_NewPokemon_Movement_1
-# 131 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 145 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_4
-# 132 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 146 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	closemessage
 LittlerootTown_NewLab_EventScript_Starter3_1:
-# 134 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 148 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	releaseall
 	return
 
 LittlerootTown_NewLab_EventScript_Starter3_2:
-# 107 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 120 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	showmonpic SPECIES_EEVEE, 4, 4
-# 108 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 121 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	showmonpic SPECIES_PIKACHU, 12, 4
-# 109 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 122 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter3_Text_0
-# 111 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 124 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_1, MSGBOX_YESNO
-# 112 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 125 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq LittlerootTown_NewLab_EventScript_Starter3_6
 LittlerootTown_NewLab_EventScript_Starter3_5:
-# 115 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 128 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_NewLab_EventScript_Starter3_9
 LittlerootTown_NewLab_EventScript_Starter3_8:
-# 126 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 140 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	hidemonpic
-# 127 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 141 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	hidemonpic
 	goto LittlerootTown_NewLab_EventScript_Starter3_1
 
 LittlerootTown_NewLab_EventScript_Starter3_6:
-# 113 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 126 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_2
 	goto LittlerootTown_NewLab_EventScript_Starter3_5
 
 LittlerootTown_NewLab_EventScript_Starter3_9:
-# 116 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 129 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	givemon SPECIES_EEVEE, 5, ITEM_ORAN_BERRY, ITEM_POKE_BALL, NATURE_HARDY, , MON_FEMALE, , , , , , , 31, 31, 31, 31, 31, 31
-# 117 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 130 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 118 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 131 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	givemon SPECIES_PIKACHU, 5, ITEM_ORAN_BERRY, ITEM_PREMIER_BALL, NATURE_SERIOUS, , MON_FEMALE, , , , , , , 31, 31, 31, 31, 31, 31
-# 119 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 132 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 120 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 133 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	setflag FLAG_RECEIVE_STARTERPAIR3
-# 121 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 134 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	removeobject 3
-# 122 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 135 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	setflag FLAG_RECEIVE_STARTER
-# 123 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 136 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	msgbox LittlerootTown_NewLab_EventScript_Starter1_Text_3
-# 124 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	setvar VAR_GET_NEWSTARTER, 2
+# 137 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	setvar VAR_STARTER_MON, 3
+# 138 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	setvar VAR_ADVENTURE_STATE, 3
 	goto LittlerootTown_NewLab_EventScript_Starter3_8
+
+
+LittlerootTown_NewLab_PokeDexNavGetAsk::
+# 152 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	goto_if_unset FLAG_SYS_POKEDEX_GET, LittlerootTown_NewLab_PokeDexNavGetAsk_2
+	return
+
+LittlerootTown_NewLab_PokeDexNavGetAsk_1:
+	return
+
+LittlerootTown_NewLab_PokeDexNavGetAsk_2:
+# 152 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	goto_if_unset FLAG_SYS_POKENAV_GET, LittlerootTown_NewLab_PokeDexNavGetAsk_1
+	return
 
 
 # 17 "data/maps/LittlerootTown_NewLab/scripts.pory"
@@ -277,81 +319,107 @@ LittlerootTown_NewPokemon_Movement_0:
 	walk_up
 # 17 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	walk_up
+# 17 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	walk_left
 	step_end
 
-# 19 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 18 "data/maps/LittlerootTown_NewLab/scripts.pory"
 LittlerootTown_NewPokemon_Movement_1:
-# 19 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 18 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	face_player
 	step_end
 
-# 22 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 23 "data/maps/LittlerootTown_NewLab/scripts.pory"
 LittlerootTown_NewPokemon_Movement_2:
-# 22 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	face_original_direction
+# 23 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	walk_right
+# 23 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	walk_right
+# 23 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	face_up
 	step_end
 
 # 32 "data/maps/LittlerootTown_NewLab/scripts.pory"
-LittlerootTown_NewLab_Block_Movement_0:
+LittlerootTown_NewPokemon_Movement_3:
 # 32 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	walk_left
+# 32 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	face_original_direction
+	step_end
+
+# 43 "data/maps/LittlerootTown_NewLab/scripts.pory"
+LittlerootTown_NewLab_Block_Movement_0:
+# 43 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	walk_up
+	step_end
+
+# 45 "data/maps/LittlerootTown_NewLab/scripts.pory"
+LittlerootTown_NewLab_Block_Movement_1:
+# 45 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	face_original_direction
 	step_end
 
 LittlerootTown_NewPokemon_Text_0:
 # 14 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	.string "Oh, you're here!$"
+	.string "Oh, you're here! Thanks for coming.$"
 
 LittlerootTown_NewPokemon_Text_1:
 # 20 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	.string "Go ahead and choose your pair.$"
+	.string "As you know, you've been interning\n"
+	.string "under me for a while, but I think you're\l"
+	.string "ready to spread your wings and explore\l"
+	.string "the region proper.\p"
+	.string "$"
+
+LittlerootTown_NewPokemon_Text_2:
+# 26 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	.string "So we pick these little ones to help you\n"
+	.string "on your journeys.$"
+
+LittlerootTown_NewPokemon_Text_3:
+# 29 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	.string "Go ahead. Please choose which of these\n"
+	.string "two you'd like to bring along.$"
 
 LittlerootTown_NewLab_Block_Text_0:
-# 30 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 41 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	.string "Hey! It's dangerous to go out without\n"
 	.string "some Pokemons!$"
 
 LittlerootTown_NewLab_EventScript_Starter1_Text_0:
-# 43 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 54 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	.string "Ralts and Gothita. These two seems\n"
-	.string "inseparable when in our care, and none\l"
-	.string "of us have the heart to separate them\l"
-	.string "now.\p"
-	.string "Regardless, if you're looking for\n"
-	.string "Pokemon with strong mental prowess,\l"
-	.string "these two would serve you well.$"
+	.string "inseparable when in our care.\p"
+	.string "If you're looking for Pokemons with\n"
+	.string "strong mental prowess, these two would\l"
+	.string "serve you well.$"
 
 LittlerootTown_NewLab_EventScript_Starter1_Text_1:
-# 45 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 56 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	.string "Would you like to pick these two?$"
 
 LittlerootTown_NewLab_EventScript_Starter1_Text_2:
-# 47 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 58 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	.string "It's fine, take your time.$"
 
 LittlerootTown_NewLab_EventScript_Starter1_Text_3:
-# 57 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 68 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	.string "Alright. Take care of them.$"
 
 LittlerootTown_NewLab_EventScript_Starter1_Text_4:
-# 65 "data/maps/LittlerootTown_NewLab/scripts.pory"
+# 77 "data/maps/LittlerootTown_NewLab/scripts.pory"
 	.string "Don't be greedy now.$"
 
 LittlerootTown_NewLab_EventScript_Starter2_Text_0:
-# 76 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	.string "Tinkatink and Rookidee. Considering the\n"
-	.string "relationship of these specieses in the\l"
-	.string "wild, it's surprising how attached these\l"
-	.string "two are.\p"
-	.string "That's aside, with Corviknight's speed\n"
-	.string "and Tinkaton's physical power, they\l"
-	.string "would serve you well in battle.$"
+# 88 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	.string "Tinkatink and Rookidee. It's surprising\n"
+	.string "how attached these two are.\p"
+	.string "With Corviknight's speed and Tinkaton's\n"
+	.string "physical power, they would serve you\l"
+	.string "well against tough foes.$"
 
 LittlerootTown_NewLab_EventScript_Starter3_Text_0:
-# 109 "data/maps/LittlerootTown_NewLab/scripts.pory"
-	.string "Ah these two. The team's favorite. Very\n"
-	.string "well behaved we nearly just want to\l"
-	.string "give them permanent residence as our\l"
-	.string "mascot!\p"
-	.string "Haha, well, that's aside, they will make a\n"
-	.string "very versatile team with some serious,\l"
-	.string "diligent care.$"
+# 122 "data/maps/LittlerootTown_NewLab/scripts.pory"
+	.string "The team's favorite. Very well behaved!\p"
+	.string "They will make a very versatile team\n"
+	.string "with some serious, diligent care.$"
