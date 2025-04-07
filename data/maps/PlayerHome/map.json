@@ -30,6 +30,13 @@
       "elevation": 0,
       "dest_map": "MAP_PLAYER_HOME_BEDROOM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
