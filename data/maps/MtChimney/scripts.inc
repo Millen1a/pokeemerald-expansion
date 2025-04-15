@@ -115,6 +115,7 @@ MtChimney_EventScript_Maxie::
 # 58 "data/maps/MtChimney/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 59 "data/maps/MtChimney/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_MAXIE
 # 60 "data/maps/MtChimney/scripts.pory"
 	removeobject LOCALID_MAGMA_GRUNT_1
@@ -127,6 +128,7 @@ MtChimney_EventScript_Maxie::
 # 64 "data/maps/MtChimney/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 # 65 "data/maps/MtChimney/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
 	setobjectxyperm LOCALID_ARCHIE, 10, 12
 # 66 "data/maps/MtChimney/scripts.pory"
 	addobject LOCALID_ARCHIE

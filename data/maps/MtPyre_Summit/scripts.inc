@@ -105,6 +105,7 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 # 53 "data/maps/MtPyre_Summit/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 54 "data/maps/MtPyre_Summit/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_ARCHIE
 # 55 "data/maps/MtPyre_Summit/scripts.pory"
 	removeobject LOCALID_GRUNT_1
@@ -123,6 +124,7 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 # 62 "data/maps/MtPyre_Summit/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 # 63 "data/maps/MtPyre_Summit/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
 	delay 20
 # 64 "data/maps/MtPyre_Summit/scripts.pory"
 	setvar VAR_MT_PYRE_STATE, 1
