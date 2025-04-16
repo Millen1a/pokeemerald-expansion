@@ -4434,7 +4434,7 @@
     {
       "id": "LAYOUT_PLAYER_HOME_BEDROOM",
       "name": "PlayerHomeBedroom_Layout",
-      "width": 8,
+      "width": 9,
       "height": 6,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",

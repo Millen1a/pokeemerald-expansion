@@ -49,8 +49,6 @@ script LittlerootTown_NewLab_Block{
 script LittlerootTown_NewLab_EventScript_Starter1 {
     lockall
     if(!flag(FLAG_RECEIVE_STARTER)){
-        showmonpic(SPECIES_GOTHITA,4,4)
-        showmonpic(SPECIES_RALTS,12,4)
         msgbox(format("Ralts and Gothita. These two seems inseparable when in our care.\p"
         "If you're looking for Pokemons with strong mental prowess, these two would serve you well."))
         msgbox(format("Would you like to pick these two?"), MSGBOX_YESNO)
@@ -69,8 +67,6 @@ script LittlerootTown_NewLab_EventScript_Starter1 {
             setvar(VAR_STARTER_MON,1)
             setvar(VAR_ADVENTURE_STATE,3)
         }
-        hidemonpic
-        hidemonpic
     }
     else{
         applymovement(4, moves(face_player))
