@@ -93,21 +93,12 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 6,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_ADVENTURE_STATE",
-      "var_value": "2",
-      "script": "LittlerootTown_NewLab_Block"
-    },
-    {
-      "type": "trigger",
       "x": 7,
-      "y": 7,
+      "y": 6,
       "elevation": 0,
       "var": "VAR_ADVENTURE_STATE",
       "var_value": "2",
-      "script": "LittlerootTown_NewLab_Block"
+      "script": "LittlerootTown_NewLab_Block_Left"
     },
     {
       "type": "trigger",
@@ -116,7 +107,7 @@
       "elevation": 0,
       "var": "VAR_ADVENTURE_STATE",
       "var_value": "2",
-      "script": "LittlerootTown_NewLab_Block"
+      "script": "LittlerootTown_NewLab_Block_Down"
     },
     {
       "type": "trigger",
@@ -125,7 +116,7 @@
       "elevation": 0,
       "var": "VAR_ADVENTURE_STATE",
       "var_value": "2",
-      "script": "LittlerootTown_NewLab_Block"
+      "script": "LittlerootTown_NewLab_Block_Down"
     },
     {
       "type": "trigger",
@@ -134,25 +125,25 @@
       "elevation": 0,
       "var": "VAR_ADVENTURE_STATE",
       "var_value": "2",
-      "script": "LittlerootTown_NewLab_Block"
+      "script": "LittlerootTown_NewLab_Block_Down"
     },
     {
       "type": "trigger",
       "x": 11,
-      "y": 7,
+      "y": 6,
       "elevation": 0,
       "var": "VAR_ADVENTURE_STATE",
       "var_value": "2",
-      "script": "LittlerootTown_NewLab_Block"
+      "script": "LittlerootTown_NewLab_Block_Right"
     },
     {
       "type": "trigger",
-      "x": 12,
-      "y": 7,
+      "x": 11,
+      "y": 5,
       "elevation": 0,
       "var": "VAR_ADVENTURE_STATE",
       "var_value": "2",
-      "script": "LittlerootTown_NewLab_Block"
+      "script": "LittlerootTown_NewLab_Block_Right"
     }
   ],
   "bg_events": [

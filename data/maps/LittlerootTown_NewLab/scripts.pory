@@ -16,7 +16,7 @@ script LittlerootTown_NewPokemon{
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up*6, walk_left))
     applymovement(4, moves(face_player))
-    waitmovement(0)
+    waitmovement(4)
     msgbox(format("As you know, you've been interning under me for a while, but I think you're ready to spread your wings and explore the region proper.\p"))
     waitmessage
     closemessage
@@ -35,12 +35,34 @@ script LittlerootTown_NewPokemon{
     releaseall
 }
 
-script LittlerootTown_NewLab_Block{
+script LittlerootTown_NewLab_Block_Down{
     lockall
     applymovement(4, moves(face_player))
 	message(format("Hey! It's dangerous to go out without some Pokemons!"))
     waitmessage
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+	waitmovement(0)
+    applymovement(4, moves(face_original_direction))
+	releaseall
+}
+
+script LittlerootTown_NewLab_Block_Left{
+    lockall
+    applymovement(4, moves(face_player))
+	message(format("Hey! It's dangerous to go out without some Pokemons!"))
+    waitmessage
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
+	waitmovement(0)
+    applymovement(4, moves(face_original_direction))
+	releaseall
+}
+
+script LittlerootTown_NewLab_Block_Right{
+    lockall
+    applymovement(4, moves(face_player))
+	message(format("Hey! It's dangerous to go out without some Pokemons!"))
+    waitmessage
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
 	waitmovement(0)
     applymovement(4, moves(face_original_direction))
 	releaseall
