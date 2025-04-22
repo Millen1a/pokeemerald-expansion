@@ -5104,12 +5104,6 @@ static void TurnValuesCleanUp(bool8 var0)
         if (var0)
         {
             gProtectStructs[i].protected = PROTECT_NONE;
-            gProtectStructs[i].spikyShielded = FALSE;
-            gProtectStructs[i].kingsShielded = FALSE;
-            gProtectStructs[i].banefulBunkered = FALSE;
-            gProtectStructs[i].obstructed = FALSE;
-            gProtectStructs[i].silkTrapped = FALSE;
-            gProtectStructs[i].burningBulwarked = FALSE;
             gProtectStructs[i].quash = FALSE;
             gProtectStructs[i].usedCustapBerry = FALSE;
             gProtectStructs[i].quickDraw = FALSE;

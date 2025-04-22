@@ -41,7 +41,7 @@
 #define OW_BERRY_GROWTH_RATE           GEN_3      // Presets for how long each Berry plant takes to grow.
 #define OW_BERRY_YIELD_RATE            GEN_3      // Presets for how many Berries each plant can yield.
 #define OW_BERRY_DRAIN_RATE            GEN_6_ORAS // If OW_BERRY_MOISTURE is enabled, this setting changes how fast the soil dries out. GEN_4 uses a Berry-dependent drain rate, GEN_6_XY dries out in 24 hours (4 hours with the relevant Mulch) and GEN_6_ORAS dries out in 4 hours. Other values are illegal.
-#define OW_BERRY_IMMORTAL              FALSE      // If enabled, once a Berry tree has grown a Berry, the tree will not disappear until picked by the player.
+#define OW_BERRY_IMMORTAL              TRUE      // If enabled, once a Berry tree has grown a Berry, the tree will not disappear until picked by the player.
 
 // Overworld Pokémon
 #define OW_POKEMON_OBJECT_EVENTS       TRUE       // Adds Object Event fields for every species. Can be used for NPCs using the OBJ_EVENT_GFX_SPECIES macro (eg. OBJ_EVENT_GFX_SPECIES(BULBASAUR))
@@ -131,7 +131,7 @@
 
 // Pokémon Center
 #define OW_IGNORE_EGGS_ON_HEAL           GEN_LATEST         // In Gen 4+, the nurse in the Pokémon Center does not heal Eggs on healing machine.
-#define OW_UNION_DISABLE_CHECK           FALSE              // When TRUE, the nurse does not inform the player if there is a trainer waiting in the Union Room. This speeds up the loading of the Pokémon Center.
+#define OW_UNION_DISABLE_CHECK           TRUE              // When TRUE, the nurse does not inform the player if there is a trainer waiting in the Union Room. This speeds up the loading of the Pokémon Center.
 #define OW_FLAG_MOVE_UNION_ROOM_CHECK    0                  // If this flag is set, the game will only check if players are in the Union Room while healing Pokémon, and not when players enter the Pokémon Center. This speeds up the loading of the Pokémon Center. This is ignored if OW_UNION_DISABLE_CHECK is TRUE.
 
 // Berry Blender
