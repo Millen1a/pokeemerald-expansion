@@ -4177,6 +4177,7 @@ BattleScript_EffectPerishSong::
 	attackcanceler
 	attackstring
 	ppreduce
+	savetarget
 	trysetperishsong BattleScript_ButItFailed
 	savetarget
 	attackanimation
@@ -4190,7 +4191,7 @@ BattleScript_PerishSongLoop::
 BattleScript_PerishSongLoopIncrement::
 	addbyte gBattlerTarget, 1
 	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_PerishSongLoop
-	restoretarget
+ 	restoretarget
 	goto BattleScript_MoveEnd
 
 BattleScript_PerishSongBlocked::
