@@ -218,7 +218,6 @@ struct SpecialStatus
     u8 distortedTypeMatchups:1;
     u8 teraShellAbilityDone:1;
     u8 criticalHit:1;
-    u8 enduredDamage:1;
     u8 unused:4;
     // End of byte
 };
