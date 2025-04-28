@@ -175,7 +175,7 @@ struct ProtectStruct
     u16 activateOpportunist:2; // 2 - to copy stats. 1 - stats copied (do not repeat). 0 - no stats to copy
     u16 usedAllySwitch:1;
     u16 lashOutAffected:1;
-    u16 padding:5;
+    u16 padding:4;
     // End of 16-bit bitfield
     u16 physicalDmg;
     u16 specialDmg;
@@ -212,12 +212,12 @@ struct SpecialStatus
     u8 announceNeutralizingGas:1;   // See Cmd_switchineffects
     u8 neutralizingGasRemoved:1;    // See VARIOUS_TRY_END_NEUTRALIZING_GAS
     u8 affectionEndured:1;
-    // End of byte
-    u8 dancerUsedMove:1;
-    u8 dancerOriginalTarget:3;
     u8 distortedTypeMatchups:1;
     u8 teraShellAbilityDone:1;
     u8 criticalHit:1;
+    // End of byte
+    u8 dancerUsedMove:1;
+    u8 dancerOriginalTarget:3;
     u8 unused:4;
     // End of byte
 };
@@ -1274,4 +1274,3 @@ static inline bool32 IsBattlerInvalidForSpreadMove(u32 battlerAtk, u32 battlerDe
 }
 
 #endif // GUARD_BATTLE_H
-

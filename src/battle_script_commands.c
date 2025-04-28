@@ -6373,7 +6373,6 @@ static bool32 HandleMoveEndAbilityBlock(u32 battlerAtk, u32 battlerDef, u32 move
             gEffectBattler = battlerDef;
             BattleScriptPushCursor();
             gBattlescriptCurrInstr = BattleScript_MagicianActivates;
-            gSpecialStatuses[battlerAtk].preventLifeOrbDamage = TRUE;
             effect = TRUE;
         }
         break;
@@ -18849,18 +18848,6 @@ void BS_SetSteelsurge(void)
     }
 }
 
-void BS_JumpIfCanGigantamax(void)
-{
-    NATIVE_ARGS(u8 battler, const u8 *jumpInstr);
-    u32 battler = GetBattlerForBattleScript(cmd->battler);
-
-    if (GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_GIGANTAMAX_FACTOR)
-      && GetGMaxTargetSpecies(gBattleMons[battler].species) != SPECIES_NONE)
-        gBattlescriptCurrInstr = cmd->jumpInstr;
-    else
-        gBattlescriptCurrInstr = cmd->nextInstr;
-}
-
 void BS_JumpIfIntimidateAbilityPrevented(void)
 {
     NATIVE_ARGS();
@@ -18943,4 +18930,16 @@ void BS_TryIntimidatEjectpack(void)
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_EjectPackActivate_Ret;
     }
+}
+
+void BS_JumpIfCanGigantamax(void)
+{
+    NATIVE_ARGS(u8 battler, const u8 *jumpInstr);
+    u32 battler = GetBattlerForBattleScript(cmd->battler);
+
+    if (GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_GIGANTAMAX_FACTOR)
+      && GetGMaxTargetSpecies(gBattleMons[battler].species) != SPECIES_NONE)
+        gBattlescriptCurrInstr = cmd->jumpInstr;
+    else
+        gBattlescriptCurrInstr = cmd->nextInstr;
 }
